@@ -1,0 +1,21 @@
+name: ci-workflow
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: welcome steps
+        run: echo "welcome to github actions"
+      - name: Checkout Repository
+        uses: actions/Checkout@V4
+      - name: number of commits
+        uses: sultansoy/pr-commits-count@v1.0
+      
+    
+      
